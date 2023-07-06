@@ -25,4 +25,5 @@ You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
 ## Breakdown of Files
-### src/components contains the components that make up the app. The global component is  
+### src/components 
+src/components contains the components that make up the app. The global component is App.svelte, which creates the visible application. The components are named according to their actions (i.e. leaflet map is the component for the map, tooltip is the component for the tooltip). These behave intuitively with one tricky exception: the chart container is inside the leaflet map in order to allow for it to change dynamically according to the selected cities. 
