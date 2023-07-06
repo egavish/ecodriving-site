@@ -1,20 +1,8 @@
-# create-svelte
+The app is built in svelte. In order to use svelte you must have node.js/npm (node packagae manager) installed. 
 
-Everything you need to build a Svelte project, powered by [`create-svelte`](https://github.com/sveltejs/kit/tree/master/packages/create-svelte).
+## Svelte Instructions
 
-## Creating a project
-
-If you're seeing this, you've probably already done this step. Congrats!
-
-```bash
-# create a new project in the current directory
-npm create svelte@latest
-
-# create a new project in my-app
-npm create svelte@latest my-app
-```
-
-## Developing
+### Developing
 
 Once you've created a project and installed dependencies with `npm install` (or `pnpm install` or `yarn`), start a development server:
 
@@ -25,7 +13,7 @@ npm run dev
 npm run dev -- --open
 ```
 
-## Building
+### Building
 
 To create a production version of your app:
 
@@ -36,3 +24,6 @@ npm run build
 You can preview the production build with `npm run preview`.
 
 > To deploy your app, you may need to install an [adapter](https://kit.svelte.dev/docs/adapters) for your target environment.
+## Breakdown of Files
+### src/components 
+src/components contains the components that make up the app. The global component is App.svelte, which creates the visible application. The components are named according to their actions (i.e. leaflet map is the component for the map, tooltip is the component for the tooltip). These behave intuitively with one tricky exception: the chart container is inside the leaflet map in order to allow for it to change dynamically according to the selected cities. 
